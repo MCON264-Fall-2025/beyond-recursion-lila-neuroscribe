@@ -4,20 +4,9 @@ public class IterativeFibonacci implements FibonacciStrategy {
 
     @Override
     public long compute(int n) {
-        if (n == 0) return 0;
-        if (n == 1) return 1;
-
-        long a = 0;  // F(0)
-        long b = 1;  // F(1)
-        long fib = 0;
-
-        for (int i = 2; i <= n; i++) {
-            fib = a + b;  // F(n) = F(n-1) + F(n-2)
-            a = b;
-            b = fib;
-        }
-        return fib;
+        //TODO implement using iterative approach
     }
+
 
     public static void main(String[] args) {
         IterativeFibonacci fibonacci = new IterativeFibonacci();
