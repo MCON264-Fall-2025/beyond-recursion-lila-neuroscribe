@@ -15,7 +15,7 @@ This describes a recursion tree where every level of the tree spawns **3 times**
 
 We can expand \( T(n) \) repeatedly:
 
-\[
+$$
 \begin{aligned}
 T(n) &= 3T(n-1) + 2 \\
      &= 3(3T(n-2) + 2) + 2 \\
@@ -24,17 +24,15 @@ T(n) &= 3T(n-1) + 2 \\
      &\;\vdots \\
      &= 3^n T(0) + 2(3^{n-1} + 3^{n-2} + \dots + 3 + 1)
 \end{aligned}
-\]
-
+$$
 ---
 
 ## Step 3. Simplify the geometric series
 
 The series in parentheses is a finite geometric sum:
+$$
 
-\[
 3^{n-1} + 3^{n-2} + \dots + 3 + 1 = \frac{3^n - 1}{3 - 1} = \frac{3^n - 1}{2}.
-\]
 
 Substitute back:
 
@@ -44,9 +42,9 @@ T(n) = 3^n T(0) + 2 × \frac{3^n - 1}{2} = 3^n T(0) + (3^n - 1)
 
 Assuming \( T(0) = 0 \) (no disks → no moves):
 
-\[
-\boxed{T(n) = 3^n - 1}
-\]
+
+[{T(n) = 3^n - 1}]
+
 
 ---
 
