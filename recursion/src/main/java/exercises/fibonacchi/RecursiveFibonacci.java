@@ -4,14 +4,16 @@ public class RecursiveFibonacci implements FibonacciStrategy {
 
     @Override
     public long compute(int n) {
-        if (n == 0) return 0;
-        if (n == 1) return 1;
+        if (n <= 1) {
+            return n;
+        }
         return compute(n - 1) + compute(n - 2);
+
     }
 
     public static void main(String[] args) {
         RecursiveFibonacci fibonacci = new RecursiveFibonacci();
-        int N = 46; // 50 will take extremely long!
+        int N = 50; // 50 will take extremely long!
 
         System.out.printf("%-10s| %-20s |%-20s|%n", "n", "Fibonacci(n)", "Time (ms)");
 
