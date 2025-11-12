@@ -13,7 +13,7 @@ public class RecursiveFibonacci implements FibonacciStrategy {
 
     public static void main(String[] args) {
         RecursiveFibonacci fibonacci = new RecursiveFibonacci();
-        int N = 46; // 50 will take extremely long!
+        int N = 50; // 50 will take extremely long!
 
         System.out.printf("%-10s| %-20s |%-20s|%n", "n", "Fibonacci(n)", "Time (ms)");
 
